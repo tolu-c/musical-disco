@@ -16,7 +16,7 @@ body {
   &__list {
     display: flex;
     list-style: none;
-    gap: 5rem;
+    gap: 2.5rem;
     font-size: 1.2rem;
 
     &__item {
@@ -45,7 +45,13 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 3rem;
-  margin: 8rem 12rem;
+  width: 100%;
+  margin: 8rem auto;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
 
   &__item {
     height: 15rem;
@@ -82,5 +88,9 @@ body {
 }
 
 .inactive {
-  grid-column: span 2;
+  grid-column: span 3;
+
+  @media (min-width: 768px) {
+    grid-column: span 2;
+  }
 }
